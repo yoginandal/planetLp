@@ -2,6 +2,7 @@
 
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo-new.webp";
+import bgImage from "../assets/images/thank-you-bg.webp";
 
 export default function ThankYouPage() {
   const navigate = useNavigate();
@@ -11,7 +12,14 @@ export default function ThankYouPage() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-[#f63947] text-white text-center relative">
+    <div
+      className="flex flex-col justify-center items-center h-screen text-white text-center relative"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <img
         className="w-[250px] p-4 mb-8 absolute top-0 left-0"
         src={logo}
