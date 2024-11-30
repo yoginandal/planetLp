@@ -1,7 +1,7 @@
 "use client";
 
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/images/logo-new.webp";
+import logo from "../assets/logo.png";
 
 export default function ThankYouPage() {
   const navigate = useNavigate();
