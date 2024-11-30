@@ -27,7 +27,6 @@ export default function LandingBanner() {
     country: "",
     level: "",
     exam: "",
-    city: "",
   });
 
   const [phoneError, setPhoneError] = useState("");
