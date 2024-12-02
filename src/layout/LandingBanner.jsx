@@ -151,20 +151,20 @@ export default function LandingBanner() {
         <div className="container mx-auto lg:mt-[-2rem] px-4 flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start gap-8">
           {/* Left Section */}
           <div className="text-white max-w-screen-lg pt-8 lg:pt-8 text-center lg:text-left">
-            <h1 className="text-2xl md:text-5xl font-normal mb-4">
+            <h1 className="text-2xl md:text-4xl font-normal mb-2">
               Dreaming of
             </h1>
-            <h2 className="text-3xl md:text-6xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Studying in Australia?
             </h2>
             <div className="text-black max-w-[768px]">
-              <p className="text-xl md:text-2xl inline-block bg-[#FFD700] px-4 py-2">
+              <p className="text-xl inline-block bg-[#FFD700] px-4 py-2">
                 Explore Endless Possibilities at the Australia <br /> Education
                 Fair by Planet Education!
               </p>
             </div>
             <div className="inline-block text-white p-4 bg-[#1E2875]">
-              <p className="text-xl md:text-2xl">
+              <p className="text-xl">
                 Your One-Stop Solution for Study Abroad Guidance
               </p>
             </div>
