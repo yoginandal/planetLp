@@ -275,7 +275,7 @@ export default function LandingBanner() {
                 }
               >
                 <SelectTrigger className="w-full p-3 border-none rounded bg-white">
-                  <SelectValue placeholder="Have you taken up IELT/PTE exam?" />
+                  <SelectValue placeholder="Have you taken up IELTS/PTE exam?" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="yes">Yes</SelectItem>
