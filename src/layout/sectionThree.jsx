@@ -10,7 +10,6 @@ export default function SectionThree() {
     "Country & University Selection",
     "Application & Visa Assistance",
     "Pre-Departure Workshops",
-    "Post-Landing Support",
     "Access to Top Australian Universities",
     "Assistance with Scholarships & Internships",
     "Post-Study Work Permit Guidance",
