@@ -144,7 +144,7 @@ export default function LandingBanner() {
       >
         {/* Logo */}
         <div className="p-4 flex justify-center lg:justify-start">
-          <img src={logo} alt="Planet Education" className="w-[150px]" />
+          <img src={logo} alt="Planet Education" className="w-[350px]" />
         </div>
 
         {/* Main Content */}
@@ -259,7 +259,7 @@ export default function LandingBanner() {
                 }
               >
                 <SelectTrigger className="w-full p-3 border-none rounded bg-white">
-                  <SelectValue placeholder="Preferred Study Level" />
+                  <SelectValue placeholder="Your Course of Interest" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="graduate">Graduate</SelectItem>

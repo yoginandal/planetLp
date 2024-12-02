@@ -14,6 +14,7 @@ export default function SectionThree() {
     "Access to Top Australian Universities",
     "Assistance with Scholarships & Internships",
     "Post-Study Work Permit Guidance",
+    "Post Landing Services",
   ];
 
   return (

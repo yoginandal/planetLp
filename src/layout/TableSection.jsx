@@ -45,12 +45,6 @@ export default function TableSection() {
       time: "11:00 AM to 4:00 PM",
     },
     {
-      city: "Bhopal",
-      date: "16th December",
-      day: "Monday",
-      time: "11:00 AM to 4:00 PM",
-    },
-    {
       city: "Jammu",
       date: "18th December",
       day: "Wednesday",
