@@ -144,27 +144,27 @@ export default function LandingBanner() {
       >
         {/* Logo */}
         <div className="p-4 flex justify-center lg:justify-start">
-          <img src={logo} alt="Planet Education" className="w-[350px]" />
+          <img src={logo} alt="Planet Education" className="w-[250px]" />
         </div>
 
         {/* Main Content */}
-        <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start gap-8">
+        <div className="container mx-auto lg:mt-[-2rem] px-4 flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start gap-8">
           {/* Left Section */}
           <div className="text-white max-w-screen-lg pt-8 lg:pt-8 text-center lg:text-left">
-            <h1 className="text-2xl md:text-6xl font-normal mb-4">
+            <h1 className="text-2xl md:text-5xl font-normal mb-4">
               Dreaming of
             </h1>
-            <h2 className="text-3xl md:text-7xl font-bold mb-6">
+            <h2 className="text-3xl md:text-6xl font-bold mb-6">
               Studying in Australia?
             </h2>
             <div className="text-black max-w-[768px]">
-              <p className="text-xl md:text-3xl inline-block bg-[#FFD700] px-4 py-2">
+              <p className="text-xl md:text-2xl inline-block bg-[#FFD700] px-4 py-2">
                 Explore Endless Possibilities at the Australia <br /> Education
                 Fair by Planet Education!
               </p>
             </div>
             <div className="inline-block text-white p-4 bg-[#1E2875]">
-              <p className="text-xl md:text-3xl">
+              <p className="text-xl md:text-2xl">
                 Your One-Stop Solution for Study Abroad Guidance
               </p>
             </div>
@@ -172,7 +172,7 @@ export default function LandingBanner() {
 
           {/* Right Section - Form */}
           <div
-            className="w-full max-w-md bg-[#FFD700] p-8 mt-8 lg:mt-16 relative mx-auto lg:mx-0
+            className="w-full max-w-sm bg-[#FFD700] p-8 mt-8 lg:mt-[-2rem] relative mx-auto lg:mx-0
             [clip-path:polygon(40px_0,100%_0,100%_calc(100%-40px),calc(100%-40px)_100%,0_100%,0_40px)]"
           >
             <h3 className="text-xl font-bold text-center mb-6">
