@@ -27,6 +27,7 @@ export default function LandingBanner() {
     country: "",
     level: "",
     exam: "",
+    city: "",
   });
 
   const [phoneError, setPhoneError] = useState("");
@@ -221,6 +222,29 @@ export default function LandingBanner() {
                 className="w-full p-3 border-none rounded bg-white"
                 required
               />
+
+              <Select
+                value={formData.city}
+                onValueChange={(value) =>
+                  setFormData((prev) => ({ ...prev, city: value }))
+                }
+              >
+                <SelectTrigger className="w-full p-3 border-none rounded bg-white">
+                  <SelectValue placeholder="Choose your city" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="mumbai">Mumbai (Andheri)</SelectItem>
+                  <SelectItem value="hyderabad">Hyderabad</SelectItem>
+                  <SelectItem value="delhi">Delhi</SelectItem>
+                  <SelectItem value="vidyanagar">Vidyanagar</SelectItem>
+                  <SelectItem value="vadodara">Vadodara</SelectItem>
+                  <SelectItem value="ahmedabad">Ahmedabad</SelectItem>
+                  <SelectItem value="chennai">Chennai</SelectItem>
+                  <SelectItem value="jammu">Jammu</SelectItem>
+                  <SelectItem value="srilanka">Sri Lanka</SelectItem>
+                  <SelectItem value="manipal">Manipal</SelectItem>
+                </SelectContent>
+              </Select>
 
               <Select
                 value={formData.country}
