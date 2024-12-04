@@ -86,6 +86,29 @@ export default function LandingBanner() {
     setError("");
     setIsSubmitting(true);
 
+    // Validate all required fields
+    if (
+      !formData.fullname ||
+      !formData.email ||
+      !formData.contact ||
+      !formData.education ||
+      !formData.country ||
+      !formData.level ||
+      !formData.exam ||
+      !formData.city
+    ) {
+      setError("All fields are required");
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Validate phone number length
+    if (formData.contact.length !== 10) {
+      setError("Phone number must be exactly 10 digits");
+      setIsSubmitting(false);
+      return;
+    }
+
     if (phoneError || digitError) {
       setError("Please correct the errors before submitting.");
       setIsSubmitting(false);
@@ -173,7 +196,7 @@ export default function LandingBanner() {
 
           {/* Right Section - Form */}
           <div
-            className="w-full max-w-sm bg-[#FFD700] p-8 mt-8 lg:mt-[-2rem] relative mx-auto lg:mx-0
+            className="w-full max-w-sm scale-[0.9] bg-[#FFD700] p-8 mt-8 lg:mt-[-2rem] relative mx-auto lg:mx-0
             [clip-path:polygon(40px_0,100%_0,100%_calc(100%-40px),calc(100%-40px)_100%,0_100%,0_40px)]"
           >
             <h3 className="text-xl font-bold text-center mb-6">
@@ -221,6 +244,9 @@ export default function LandingBanner() {
                 onBlur={handleBlur}
                 className="w-full p-3 border-none rounded bg-white"
                 required
+                minLength={10}
+                maxLength={10}
+                pattern="[0-9]{10}"
               />
 
               <Select
@@ -228,11 +254,17 @@ export default function LandingBanner() {
                 onValueChange={(value) =>
                   setFormData((prev) => ({ ...prev, city: value }))
                 }
+                required
               >
                 <SelectTrigger className="w-full p-3 border-none rounded bg-white">
-                  <SelectValue placeholder="Choose your city" />
+                  <SelectValue placeholder="Choose your city *" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent
+                  position="popper"
+                  side="bottom"
+                  align="start"
+                  sideOffset={4}
+                >
                   <SelectItem value="mumbai">Mumbai (Andheri)</SelectItem>
                   <SelectItem value="hyderabad">Hyderabad</SelectItem>
                   <SelectItem value="delhi">Delhi</SelectItem>
@@ -251,11 +283,17 @@ export default function LandingBanner() {
                 onValueChange={(value) =>
                   setFormData((prev) => ({ ...prev, country: value }))
                 }
+                required
               >
                 <SelectTrigger className="w-full p-3 border-none rounded bg-white">
-                  <SelectValue placeholder="Your Preferred Study Destination" />
+                  <SelectValue placeholder="Your Preferred Study Destination *" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent
+                  position="popper"
+                  side="bottom"
+                  align="start"
+                  sideOffset={4}
+                >
                   <SelectItem value="Australia">Australia</SelectItem>
                 </SelectContent>
               </Select>
@@ -265,9 +303,10 @@ export default function LandingBanner() {
                 onValueChange={(value) =>
                   setFormData((prev) => ({ ...prev, education: value }))
                 }
+                required
               >
                 <SelectTrigger className="w-full p-3 border-none rounded bg-white">
-                  <SelectValue placeholder="Current Level of Education" />
+                  <SelectValue placeholder="Current Level of Education *" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="12th">12th Pass</SelectItem>
@@ -281,9 +320,10 @@ export default function LandingBanner() {
                 onValueChange={(value) =>
                   setFormData((prev) => ({ ...prev, level: value }))
                 }
+                required
               >
                 <SelectTrigger className="w-full p-3 border-none rounded bg-white">
-                  <SelectValue placeholder="Your Course of Interest" />
+                  <SelectValue placeholder="Your Course of Interest *" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="graduate">Graduate</SelectItem>
@@ -297,9 +337,10 @@ export default function LandingBanner() {
                 onValueChange={(value) =>
                   setFormData((prev) => ({ ...prev, exam: value }))
                 }
+                required
               >
                 <SelectTrigger className="w-full p-3 border-none rounded bg-white">
-                  <SelectValue placeholder="Have you taken up IELTS/PTE exam?" />
+                  <SelectValue placeholder="Have you taken up IELTS/PTE exam? *" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="yes">Yes</SelectItem>
